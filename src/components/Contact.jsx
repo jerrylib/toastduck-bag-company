@@ -111,7 +111,7 @@ const Contact = () => {
                     <dt>Whatsapp</dt>
                     <dd>
                       <ul class="list-semicolon">
-                        <li><a href="tel:#">(+86) 13459831691</a></li>
+                        <li><a href="tel:#">(+86) 17605010609</a></li>
                       </ul>
                     </dd>
                   </dl>
