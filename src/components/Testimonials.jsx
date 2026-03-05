@@ -14,7 +14,7 @@ const Testimonials = () => {
 
   const testimonials = [
     {
-      text: "My cooperation with your team helped me understand that you really care about your clients – it has already been proven by a lot of positive reviews – and that's why I chose you. Your reliable solutions helped me improve my business plan in no time!",
+      text: "My cooperation with your team helped me understand that you really care about your clients - it has already been proven by a lot of positive reviews - and that's why I chose you. Your reliable solutions helped me improve my business plan in no time!",
       author: "Jane Smith",
       position: "Customer",
       image: "/images/testimonials-1-120x120.jpg"
@@ -44,21 +44,21 @@ const Testimonials = () => {
 
   return (
     <section className="section-lg bg-default text-center" id="clients">
-      <div className="container">
-        <h4 className="heading-decorated text-3xl font-bold">WHAT PEOPLE SAY</h4>
+      <div className="container px-4">
+        <h4 className="heading-decorated text-2xl md:text-3xl font-bold">WHAT PEOPLE SAY</h4>
         <div className="row row-50">
-          <div className="col-lg-5">
+          <div className="col-12 col-lg-5 mb-8 lg:mb-0">
             <div className="row row-30">
               {companies.map((company, index) => (
-                <div key={index} className="col-sm-6 mb-4">
-                  <figure className="box-icon-image text-center p-5 rounded-lg transition-all duration-300 cursor-pointer min-h-[120px] flex items-center justify-center hover:-translate-y-1">
+                <div key={index} className="col-6 col-sm-4 mb-4">
+                  <figure className="box-icon-image text-center p-3 md:p-5 rounded-lg transition-all duration-300 cursor-pointer min-h-[100px] md:min-h-[120px] flex items-center justify-center hover:-translate-y-1">
                     <a href="#" className="no-underline">
                       <img
                         src={company.image}
                         alt={company.name}
                         width={company.width}
                         height={company.height}
-                        className="max-w-full h-auto grayscale transition-all duration-300 hover:grayscale-0"
+                        className="max-w-full h-auto w-full object-contain grayscale transition-all duration-300 hover:grayscale-0"
                         onError={(e) => {
                           e.target.style.display = 'none';
                           e.target.nextSibling.style.display = 'block';
@@ -73,14 +73,14 @@ const Testimonials = () => {
               ))}
             </div>
           </div>
-          <div className="col-lg-7 text-start">
-            <div className="testimonial-carousel relative min-h-[300px]">
+          <div className="col-12 col-lg-7 text-start">
+            <div className="testimonial-carousel relative min-h-[280px] md:min-h-[300px]">
               {/* 当前显示的评价 */}
-              <div className="testimonial-item opacity-100 transition-opacity duration-500 p-5">
+              <div className="testimonial-item opacity-100 transition-opacity duration-500 p-4 md:p-5">
                 <div className="quote-classic">
                   <div className="quote-classic__main">
                     <svg
-                      className="quote-classic__mark fill-blue-400 mb-5"
+                      className="quote-classic__mark fill-blue-400 mb-4 md:mb-5 w-6 h-6 md:w-auto md:h-auto"
                       version="1.1"
                       baseProfile="tiny"
                       xmlns="http://www.w3.org/2000/svg"
@@ -96,29 +96,29 @@ const Testimonials = () => {
                       </g>
                     </svg>
                     <div className="quote-classic__text">
-                      <p className="q text-lg leading-relaxed italic mb-8 text-gray-700">
+                      <p className="q text-base md:text-lg leading-relaxed italic mb-4 md:mb-8 text-gray-700">
                         "{testimonials[currentTestimonial].text}"
                       </p>
                     </div>
                   </div>
-                  <div className="quote-classic__caption flex items-center gap-4">
+                  <div className="quote-classic__caption flex items-center gap-3 md:gap-4">
                     <div className="quote-classic__image quote-classic__caption-aside">
                       <img
                         src={testimonials[currentTestimonial].image}
                         alt={testimonials[currentTestimonial].author}
-                        width="80"
-                        height="80"
-                        className="rounded-full object-cover border-3 border-blue-600"
+                        width="60"
+                        height="60"
+                        className="rounded-full object-cover border-3 border-blue-600 w-12 h-12 md:w-16 md:h-16"
                         onError={(e) => {
                           e.target.style.display = 'none';
                         }}
                       />
                     </div>
                     <div className="quote-classic__caption-main">
-                      <p className="quote-classic__cite font-bold text-base m-0 mb-1 text-gray-800">
+                      <p className="quote-classic__cite font-bold text-sm md:text-base m-0 mb-1 text-gray-800">
                         {testimonials[currentTestimonial].author}
                       </p>
-                      <p className="quote-classic__small text-gray-600 text-sm m-0">
+                      <p className="quote-classic__small text-gray-600 text-xs md:text-sm m-0">
                         {testimonials[currentTestimonial].position}
                       </p>
                     </div>
@@ -127,7 +127,7 @@ const Testimonials = () => {
               </div>
 
               {/* 导航点 */}
-              <div className="testimonial-dots flex justify-center gap-2 mt-8">
+              <div className="testimonial-dots flex justify-center gap-2 mt-6 md:mt-8">
                 {testimonials.map((_, index) => (
                   <button
                     key={index}
@@ -140,17 +140,17 @@ const Testimonials = () => {
                 ))}
               </div>
 
-              {/* 导航箭头 */}
+              {/* 导航箭头 - 移动端隐藏 */}
               <button
                 onClick={() => setCurrentTestimonial((prev) => prev === 0 ? testimonials.length - 1 : prev - 1)}
-                className="absolute left-2 top-1/2 -translate-y-1/2 bg-blue-400 bg-opacity-80 text-white border-none rounded-full w-10 h-10 cursor-pointer text-lg flex items-center justify-center"
+                className="hidden md:flex absolute left-2 top-1/2 -translate-y-1/2 bg-blue-400 bg-opacity-80 text-white border-none rounded-full w-10 h-10 cursor-pointer text-lg items-center justify-center"
                 aria-label="Previous testimonial"
               >
                 ‹
               </button>
               <button
                 onClick={() => setCurrentTestimonial((prev) => (prev + 1) % testimonials.length)}
-                className="absolute right-2 top-1/2 -translate-y-1/2 bg-blue-400 bg-opacity-80 text-white border-none rounded-full w-10 h-10 cursor-pointer text-lg flex items-center justify-center"
+                className="hidden md:flex absolute right-2 top-1/2 -translate-y-1/2 bg-blue-400 bg-opacity-80 text-white border-none rounded-full w-10 h-10 cursor-pointer text-lg items-center justify-center"
                 aria-label="Next testimonial"
               >
                 ›

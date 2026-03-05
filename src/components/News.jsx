@@ -24,21 +24,21 @@ const News = () => {
   ];
 
   return (
-    <section 
-      className="section-md bg-gray-lighter py-15 bg-gray-50 min-h-[400px]" 
+    <section
+      className="section-lg md:py-15 bg-gray-50 min-h-[400px]"
       id="news"
     >
-      <div className="container mx-auto px-4">
+      <div className="container px-4">
         <div className="row">
           <div className="col-sm-12 text-center">
-            <h4 className="heading-decorated text-3xl font-semibold text-gray-800 mb-5 relative">
+            <h4 className="heading-decorated text-2xl md:text-3xl font-semibold text-gray-800 mb-5 relative">
               Recent News
             </h4>
           </div>
         </div>
         <div className="row row-60">
           {newsItems.map((item, index) => (
-            <div key={index} className="col-12 col-md-6 col-lg-4 mb-4">
+            <div key={index} className="col-12 col-md-6 col-lg-4 mb-6 md:mb-0">
               <article className="post-classic post-minimal h-full flex flex-col">
                 <a className="post-minimal-image block mb-4" href="#">
                   <img
@@ -60,18 +60,19 @@ const News = () => {
                       </a>
                     </h6>
                   </div>
-                  <div className="post-meta text-sm text-gray-600">
-                    <div className="group">
-                      <a href="#" className="no-underline text-sky-400 mr-4">
+                  <div className="post-meta text-sm text-gray-600 mt-2">
+                    <div className="group flex flex-wrap gap-2">
+                      <a href="#" className="no-underline text-sky-400">
                         <time dateTime="2021">{item.date}</time>
                       </a>
+                      <span className="text-gray-400">|</span>
                       <a className="meta-author no-underline text-gray-400" href="#">
                         by {item.author}
                       </a>
                     </div>
                   </div>
-                  <div className="post-classic-body flex-1">
-                    <p className="m-0 text-sm leading-8 text-gray-700">
+                  <div className="post-classic-body flex-1 mt-3">
+                    <p className="m-0 text-sm leading-relaxed text-gray-700">
                       {item.excerpt}
                     </p>
                   </div>

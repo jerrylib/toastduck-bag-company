@@ -7,14 +7,12 @@ const HeroSlider = () => {
   useEffect(() => {
     const video = videoRef.current;
     if (video) {
-      // 确保视频在加载后开始播放
       video.addEventListener('loadeddata', () => {
         video.play().catch(error => {
           console.log('Video autoplay failed:', error);
         });
       });
 
-      // 处理视频加载错误
       video.addEventListener('error', (e) => {
         console.log('Video loading error:', e);
       });
@@ -28,13 +26,14 @@ const HeroSlider = () => {
 
   return (
     <section
-      className="swiper-container swiper-slider swiper-slider_full"
+      className="swiper-container swiper-slider swiper-slider_full mt-[70px] md:mt-0"
+      style={{ maxHeight: '70vh' }}
     >
       <div className="swiper-wrapper">
-        <div className="swiper-slide swiper-slide_video context-dark" 
-        style={{display: current === 0 ? 'block' : 'none'}}
+        <div className="swiper-slide swiper-slide_video context-dark"
+        style={{display: current === 0 ? 'block' : 'none', maxHeight: '70vh' }}
         >
-          <div className="vide_bg relative overflow-hidden h-full">
+          <div className="vide_bg relative overflow-hidden h-full max-h-[70vh]">
             <video
               ref={videoRef}
               autoPlay
@@ -51,31 +50,29 @@ const HeroSlider = () => {
               Your browser does not support the video tag.
             </video>
             <div
-              className="swiper-slide-caption text-center relative z-10  h-full"
+              className="swiper-slide-caption text-center relative z-10 h-full flex items-center justify-center px-4 py-8"
               data-speed="0.5"
               data-fade="true"
             >
               <div className="container">
                 <div
-                  className='text-6xl font-bold tracking-wide'
+                  className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-wide'
                 >
-                  Welcome to Toast Duck
+                  ABB & Schneider Electric Exporter
                 </div>
                 <div
-                  className="text-width-2 block-centered text-xl mt-8 font-bold tracking-wide"
+                  className="text-width-2 block-centered text-sm sm:text-base md:text-lg lg:text-xl mt-4 md:mt-8 font-bold tracking-wide"
                   data-caption-animate="fadeInUpSmall"
                   data-caption-delay="200"
                 >
-                  Our company provides services for small and medium businesses
-                  located worldwide.
+                  Your trusted partner for industrial electrical components export worldwide.
                 </div>
                 <div className="group-lg group-middle">
                   <a
                     className="btn btn-black"
                     data-caption-animate="fadeInUpSmall"
                     data-caption-delay="350"
-                    href="#"
-                    data-custom-scroll-to="services"
+                    href="#services"
                   >
                     View Services
                   </a>
@@ -83,7 +80,7 @@ const HeroSlider = () => {
                     className="btn btn-primary"
                     data-caption-animate="fadeInUpSmall"
                     data-caption-delay="350"
-                    href="#"
+                    href="#contacts"
                   >
                     Get in Touch
                   </a>
@@ -94,18 +91,19 @@ const HeroSlider = () => {
         </div>
         <div
           className="swiper-slide context-dark bg-overlay-darker bg-[url(/images/slide-1.jpg)]"
-          style={{display: current === 1 ? 'block' : 'none'}}
+          style={{display: current === 1 ? 'block' : 'none', maxHeight: '70vh', backgroundSize: 'cover', backgroundPosition: 'center', minHeight: '400px' }}
         >
-          <div className="swiper-slide-caption text-start">
-            <div className="container mt-16">
-              <h2 className='text-6xl font-bold tracking-wide'
+          <div className="swiper-slide-caption text-start h-full flex">
+            <div className="container my-auto md:mt-16 px-4">
+              <h2 className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-wide'
               >
-                Professional Business
-                <br className="d-none d-lg-block" />
-                Consulting Services
+                Premium Electrical
+                <br className="hidden md:block" />
+                Components Export
               </h2>
+              <p className="text-sm md:text-xl mt-2 md:mt-4">Authorized distributor of ABB and Schneider Electric products</p>
               <a
-                className="btn btn-primary"
+                className="btn btn-primary mt-4 md:mt-6 text-sm md:text-base px-4 md:px-6 py-2 md:py-3 inline-flex items-center justify-center"
                 data-caption-animate="fadeInLeftSmall"
                 data-caption-delay="200"
                 href="#"
@@ -117,25 +115,31 @@ const HeroSlider = () => {
         </div>
         <div
           className="swiper-slide context-dark bg-overlay-darker bg-[url(/images/slide-2.jpg)]"
-          style={{display: current === 2 ? 'block' : 'none'}}
+          style={{display: current === 2 ? 'block' : 'none', maxHeight: '70vh', backgroundSize: 'cover', backgroundPosition: 'center', minHeight: '400px' }}
         >
-          <div className="swiper-slide-caption text-center">
-            <div className="container">
-              <h1 className='text-6xl font-bold tracking-wide' >
-                <span>SBG</span>
+          <div className="swiper-slide-caption text-center h-full flex">
+            <div className="container px-4 py-8 md:py-0 my-auto">
+              <h1 className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-wide' >
+                <span>Global Trade</span>
               </h1>
-              <h3 className='text-3xl font-bold tracking-wide'
+              <h3 className='text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold tracking-wide mt-2 md:mt-4'
               >
-                Quality Business Advisory
+                Reliable Export Solutions Since 2015
               </h3>
               <div className="group-lg group-middle">
                 <a
                   className="btn btn-primary"
+                  data-caption-animate="fadeInUpSmall"
+                  data-caption-delay="350"
+                  href="#services"
                 >
                   View Services
                 </a>
                 <a
                   className="btn btn-black"
+                  data-caption-animate="fadeInUpSmall"
+                  data-caption-delay="350"
+                  href="#contacts"
                 >
                   Get in Touch
                 </a>

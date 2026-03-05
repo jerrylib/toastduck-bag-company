@@ -14,7 +14,7 @@ function App() {
   return (
     <Router>
       <Preloader />
-      <div className="page w-full m-0 p-0">
+      <div className="page w-full m-0 p-0 pt-[70px] md:pt-0">
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />

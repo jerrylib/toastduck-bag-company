@@ -28,11 +28,11 @@ const Team = () => {
 
   return (
     <section className="section-lg bg-gray-lighter text-center" id="team">
-      <div className="container">
+      <div className="container px-4">
         <div className="row justify-content-xl-center row-50">
-          <div className="col-xl-9">
-            <h4 className="heading-decorated text-3xl font-bold">Our Team</h4>
-            <p className="mt-4 leading-8">
+          <div className="col-12 col-xl-9">
+            <h4 className="heading-decorated text-2xl md:text-3xl font-bold">Our Team</h4>
+            <p className="mt-4 leading-relaxed text-sm md:text-base">
               We are a team of professionals from different backgrounds who share
               knowledge and expertise in business consulting aiming to provide
               professional services and support to our clients to the highest
@@ -42,14 +42,15 @@ const Team = () => {
         </div>
         <div className="row row-50">
           {teamMembers.map((member, index) => (
-            <div key={index} className="col-md-6 col-lg-4">
+            <div key={index} className="col-12 col-md-6 col-lg-4 mb-6 md:mb-0">
               <div className="thumb thumb-corporate">
                 <div className="thumb-corporate__main">
                   <img
                     src={member.image}
-                    alt=""
+                    alt={member.name}
                     width="420"
                     height="315"
+                    className="w-full h-auto"
                   />
                   <div className="thumb-corporate__overlay">
                     <ul className="list-inline-sm thumb-corporate__list">

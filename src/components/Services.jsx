@@ -2,27 +2,27 @@ const Services = () => {
   const services = [
     {
       image: "/images/service-1-652x491.jpg",
-      title: "Business Planning",
-      description: "We can create an efficient and reliable business plan designed to fit your company's sphere of activity and industry experience."
+      title: "ABB Products Export",
+      description: "We specialize in exporting a wide range of ABB electrical components including circuit breakers, relays, contactors, and automation solutions."
     },
     {
       image: "/images/service-2-652x491.jpg",
-      title: "Equity & Venture Funds",
-      description: "Our professional team will be glad to provide you with advice on managing equity and venture capital funds."
+      title: "Schneider Electric Products",
+      description: "Authorized exporter of Schneider Electric products including power distribution equipment, industrial automation, and building management systems."
     },
     {
       image: "/images/service-3-652x491.jpg",
-      title: "Strategic Growth",
-      description: "Our company provides a customized approach to advising clients looking to grow through acquisition."
+      title: "Global Shipping & Logistics",
+      description: "End-to-end logistics support including international freight, customs clearance, and reliable delivery to over 50 countries worldwide."
     }
   ];
 
   return (
-    <section className="section-md bg-default" id="services">
-      <div className="container">
+    <section className="section-lg bg-default" id="services">
+      <div className="container px-4">
         <div className="row row-60">
           {services.map((service, index) => (
-            <div key={index} className="col-md-6 col-xl-4">
+            <div key={index} className="col-12 col-md-6 col-xl-4">
               <div className="thumbnail-classic">
                 <a href="#">
                   <img
@@ -30,15 +30,16 @@ const Services = () => {
                     alt=""
                     width="652"
                     height="491"
+                    className="w-full h-auto object-cover"
                   />
                 </a>
                 <div className="caption">
                   <h5>
-                    <a className="thumbnail-classic-title text-xl font-bold" href="#">
+                    <a className="thumbnail-classic-title text-lg md:text-xl font-bold" href="#">
                       {service.title}
                     </a>
                   </h5>
-                  <p>{service.description}</p>
+                  <p className="text-sm md:text-base">{service.description}</p>
                 </div>
               </div>
             </div>

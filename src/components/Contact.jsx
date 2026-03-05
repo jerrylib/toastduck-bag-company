@@ -6,6 +6,8 @@ const Contact = () => {
     email: '',
     message: ''
   });
+  const [isSending, setIsSending] = useState(false);
+  const [sendStatus, setSendStatus] = useState(null);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -29,18 +31,42 @@ const Contact = () => {
     }
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    alert('Thank you for your message! We will get back to you soon.');
-    setFormData({ name: '', email: '', message: '' });
+    setIsSending(true);
+    setSendStatus(null);
+
+    try {
+      const response = await fetch('https://formspree.io/f/xqeyzqze', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      });
+
+      if (response.ok) {
+        setSendStatus('success');
+        setFormData({ name: '', email: '', message: '' });
+        alert('Thank you for your message! We will get back to you soon.');
+      } else {
+        throw new Error('Form submission failed');
+      }
+    } catch (error) {
+      console.error('Form submission error:', error);
+      setSendStatus('error');
+      alert('Failed to send message. Please try again or email us directly.');
+    } finally {
+      setIsSending(false);
+    }
   };
 
   return (
     <>
       {/* Call to Action Section */}
       <section
-        className="section-md bg-accent bg-image text-center bg-overlay-darker"
+        className="section-lg bg-accent bg-image text-center bg-overlay-darker py-12 md:py-16"
         style={{
           backgroundImage: "url(/images/bg-image-8.jpg)",
           backgroundPosition: "center 10%",
@@ -50,7 +76,7 @@ const Contact = () => {
           color: "white"
         }}
       >
-        <div 
+        <div
           style={{
             position: "absolute",
             top: 0,
@@ -60,14 +86,14 @@ const Contact = () => {
             zIndex: 1
           }}
         ></div>
-        <div className="container" style={{ position: "relative", zIndex: 2 }}>
+        <div className="container px-4" style={{ position: "relative", zIndex: 2 }}>
           <div className="row justify-content-md-center">
-            <div className="col-md-11 col-lg-9 col-xl-8">
-              <h3 className="heading-decorated text-5xl tracking-wide leading-16 font-bold">
-                Make your business prosper with our advisory and consulting services!
+            <div className="col-12 col-md-11 col-lg-9 col-xl-8">
+              <h3 className="heading-decorated text-2xl md:text-3xl lg:text-4xl xl:text-5xl tracking-wide leading-tight md:leading-16 font-bold">
+                Get high-quality ABB & Schneider Electric components for your projects!
               </h3>
               <a
-                className="btn btn-primary"
+                className="btn btn-primary mt-6 md:mt-8"
                 href="#contacts"
                 style={{
                   backgroundColor: "#1d89ff",
@@ -89,60 +115,60 @@ const Contact = () => {
       </section>
 
       {/* Contact Form and Details Section */}
-      <section className="section-md bg-default" id="contacts">
-        <div className="container">
+      <section className="section-lg bg-default" id="contacts">
+        <div className="container px-4">
           <div className="row row-50">
             {/* Contact Details */}
-            <div className="col-lg-4">
-              <div className='text-3xl font-bold'>Contact Details</div>
-              <div className="contact-info">
-              <ul class="list-sm contact-info">
-                <li>
-                  <dl class="list-terms-inline">
-                    <dt>Address</dt>
-                    <dd>
+            <div className="col-12 col-lg-4 mb-8 lg:mb-0">
+              <div className='text-2xl md:text-3xl font-bold'>Contact Details</div>
+              <div className="contact-info mt-4">
+              <ul className="list-sm contact-info">
+                <li className="mb-4">
+                  <dl className="list-terms-inline">
+                    <dt className="font-semibold">Address</dt>
+                    <dd className="text-sm md:text-base">
                       Room 906, No.6, Banzhong Road, Fuzhou City, Fujian
                       Province, China
                     </dd>
                   </dl>
                 </li>
-                <li>
-                  <dl class="list-terms-inline">
-                    <dt>Whatsapp</dt>
+                <li className="mb-4">
+                  <dl className="list-terms-inline">
+                    <dt className="font-semibold">Whatsapp</dt>
                     <dd>
-                      <ul class="list-semicolon">
-                        <li><a href="tel:#">(+86) 17605010609</a></li>
+                      <ul className="list-semicolon">
+                        <li><a href="tel:+8617605010609" className="text-sm md:text-base">(+86) 17605010609</a></li>
                       </ul>
                     </dd>
                   </dl>
                 </li>
-                <li>
-                  <dl class="list-terms-inline">
-                    <dt>E-mail</dt>
+                <li className="mb-4">
+                  <dl className="list-terms-inline">
+                    <dt className="font-semibold">E-mail</dt>
                     <dd>
-                      <ul class="list-semicolon">
-                        <li><a href="tel:#">ferrislee2024@163.com</a></li>
+                      <ul className="list-semicolon">
+                        <li><a href="mailto:ferrislee2024@163.com" className="text-sm md:text-base">ferrislee2024@163.com</a></li>
                       </ul>
                     </dd>
                   </dl>
                 </li>
-                <li>
-                  <dl class="list-terms-inline">
-                    <dt>We are open</dt>
-                    <dd>Mn-Fr: 8 am-10 pm</dd>
+                <li className="mb-4">
+                  <dl className="list-terms-inline">
+                    <dt className="font-semibold">We are open</dt>
+                    <dd className="text-sm md:text-base">Mn-Fr: 8 am-10 pm</dd>
                   </dl>
                 </li>
-                <li>
-                  <ul class="list-inline-sm">
-                    <li><a class="icon-sm fa-facebook icon text-sky-600" href="#"></a></li>
-                    <li><a class="icon-sm fa-twitter icon text-sky-600" href="#"></a></li>
+                <li className="mt-4">
+                  <ul className="list-inline-sm flex flex-wrap gap-3">
+                    <li><a className="icon-sm fa-facebook icon text-sky-600" href="#"></a></li>
+                    <li><a className="icon-sm fa-twitter icon text-sky-600" href="#"></a></li>
                     <li>
-                      <a class="icon-sm fa-google-plus icon text-sky-600" href="#"></a>
+                      <a className="icon-sm fa-google-plus icon text-sky-600" href="#"></a>
                     </li>
-                    <li><a class="icon-sm fa-vimeo icon text-sky-600" href="#"></a></li>
-                    <li><a class="icon-sm fa-youtube icon text-sky-600" href="#"></a></li>
+                    <li><a className="icon-sm fa-vimeo icon text-sky-600" href="#"></a></li>
+                    <li><a className="icon-sm fa-youtube icon text-sky-600" href="#"></a></li>
                     <li>
-                      <a class="icon-sm fa-pinterest-p icon text-sky-600" href="#"></a>
+                      <a className="icon-sm fa-pinterest-p icon text-sky-600" href="#"></a>
                     </li>
                   </ul>
                 </li>
@@ -150,19 +176,19 @@ const Contact = () => {
               </div>
             </div>
             {/* Contact Form */}
-            <div className="col-lg-8">
-              <h4 className="heading-decorated text-3xl font-bold">Get in Touch</h4>
+            <div className="col-12 col-lg-8">
+              <h4 className="heading-decorated text-2xl md:text-3xl font-bold">Get in Touch</h4>
               <form
                 onSubmit={handleSubmit}
-                className="rd-mailform"
+                className="rd-mailform mt-4"
                 data-form-output="form-output-global"
                 data-form-type="contact"
               >
                 <div className="row row-20">
-                  <div className="col-md-6">
+                  <div className="col-12 col-md-6 mb-4">
                     <div className="form-wrap">
                       <input
-                        className="form-input"
+                        className="form-input w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:border-blue-500"
                         id="contact-name"
                         type="text"
                         name="name"
@@ -177,10 +203,10 @@ const Contact = () => {
                       </label>
                     </div>
                   </div>
-                  <div className="col-md-6">
+                  <div className="col-12 col-md-6 mb-4">
                     <div className="form-wrap">
                       <input
-                        className="form-input"
+                        className="form-input w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:border-blue-500"
                         id="contact-email"
                         type="email"
                         name="email"
@@ -195,10 +221,10 @@ const Contact = () => {
                       </label>
                     </div>
                   </div>
-                  <div className="col-12">
+                  <div className="col-12 mb-4">
                     <div className="form-wrap">
                       <textarea
-                        className="form-input"
+                        className="form-input w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:border-blue-500"
                         id="contact-message"
                         name="message"
                         value={formData.message}
@@ -206,7 +232,7 @@ const Contact = () => {
                         onFocus={handleFocus}
                         onBlur={handleBlur}
                         required
-                        rows="7"
+                        rows="5"
                       ></textarea>
                       <label className={`form-label ${formData.message ? 'focus' : ''}`} htmlFor="contact-message">
                         Your Message <span className='text-red-700'>*</span>
@@ -214,16 +240,17 @@ const Contact = () => {
                     </div>
                   </div>
                 </div>
-                <button 
-                  className="btn btn-primary" 
+                <button
+                  className="btn btn-primary mt-2 disabled:opacity-50"
                   type="submit"
+                  disabled={isSending}
                 >
-                  Send Message
+                  {isSending ? 'Sending...' : 'Send Message'}
                 </button>
               </form>
             </div>
 
-            
+
           </div>
         </div>
       </section>
@@ -234,7 +261,7 @@ const Contact = () => {
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2129.717374049382!2d119.32560030219558!3d26.139907931829057!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1szh-CN!2s!4v1752747089758!5m2!1szh-CN!2s"
             width="100%"
-            height="450"
+            height="300"
             className="border-0 block"
             allowFullScreen=""
             loading="lazy"
