@@ -2,42 +2,62 @@ const About = () => {
   const features = [
     {
       icon: "linear-icon-rocket",
-      title: "ABB & Schneider Authorized",
-      description: "Direct partnerships with ABB and Schneider Electric for authentic products with full warranty support."
+      title: "Global Trade Expertise",
+      "description": "Years of experience in international trade with streamlined customs and logistics procedures, serving clients worldwide."
     },
     {
       icon: "linear-icon-equalizer",
       title: "Competitive Pricing",
-      description: "We offer factory-direct pricing on all electrical components, ensuring the best value for your projects."
+      "description": "We offer factory-direct pricing on all products, ensuring the best value for your business needs."
     },
     {
       icon: "linear-icon-arrow-down-square",
-      title: "Global Export Expertise",
-      description: "Years of experience in international trade with streamlined customs and logistics procedures."
+      title: "Quality Assurance",
+      "description": "Strict quality control processes to ensure all products meet international standards."
     },
     {
       icon: "linear-icon-feather",
-      title: "Technical Support",
-      description: "Professional technical consultation to help you select the right products for your specific applications."
+      title: "Professional Support",
+      "description": "Dedicated customer service team providing professional consultation and after-sales support."
     }
   ];
 
   return (
     <section className="section-lg bg-gray-lighter" id="about">
       <div className="container px-4">
+        {/* H1: Company name + value proposition */}
+        <h1 className="heading-decorated text-2xl md:text-3xl font-bold mb-4" style={{display: 'none'}}>
+          Toastduck International Business Co., Ltd. - Professional Import & Export Services
+        </h1>
+
         <div className="row justify-content-md-center align-items-lg-center justify-content-lg-between row-50">
           <div className="col-12 col-md-9 col-lg-6">
-            <h4 className="heading-decorated text-2xl md:text-3xl font-bold">About us</h4>
+            {/* H2: Company Introduction */}
+            <h2 className="heading-decorated text-2xl md:text-3xl font-bold">About Us</h2>
             <p className="mt-4 leading-relaxed text-sm md:text-base">
-              Welcome to Fujian Toast Duck International Business Co., Ltd., a professional
-              exporter of ABB and Schneider Electric electrical components. We specialize in
-              providing high-quality industrial automation and power distribution solutions
-              to clients worldwide. With extensive experience in international trade and
-              strong partnerships with leading electrical equipment manufacturers, we are
-              your trusted source for ABB and Schneider products. Our commitment to quality,
-              competitive pricing, and reliable delivery has made us a preferred partner
-              for businesses across the globe.
+              Welcome to Toastduck International Business Co., Limited, a professional
+              trading company established in Hong Kong. We specialize in import and export
+              services covering e-commerce, electronic components, hardware, clothing and
+              footwear, bags and luggage, and sports equipment. With extensive experience
+              in international trade and a strong network of suppliers and clients worldwide,
+              we are your trusted partner for quality products and reliable service. Our
+              commitment to quality, competitive pricing, and reliable delivery has made
+              us a preferred partner for businesses across the globe.
             </p>
+
+            {/* H2: Core Business */}
+            <h3 className="text-xl font-bold mt-6 mb-3">Our Business Scope</h3>
+            <ul className="list-disc pl-5 mb-4">
+              <li>E-commerce Trading</li>
+              <li>Electronic Components Export</li>
+              <li>Hardware Products</li>
+              <li>Clothing, Footwear & Accessories</li>
+              <li>Bags and Luggage</li>
+              <li>Sports Equipment</li>
+            </ul>
+
+            {/* H2: Why Choose Us */}
+            <h3 className="text-xl font-bold mt-6 mb-3">Why Choose Us</h3>
             <div className="row row-30">
               {features.map((feature, index) => (
                 <div key={index} className="col-12 col-sm-6">
@@ -65,21 +85,21 @@ const About = () => {
               <a href="#">
                 <img
                   src="/images/blog-image-1-420x317.jpg"
-                  alt=""
+                  alt="Toastduck International Business Team - Our Professional Staff"
                   width="420"
                   height="317"
                   className="w-full h-auto"
                 />
               </a>
               <div className="caption">
-                <h5>
+                <h3>
                   <a className="thumbnail-classic-title text-lg md:text-xl font-bold" href="#">
-                    Who we are
+                    Who We Are
                   </a>
-                </h5>
+                </h3>
                 <p className="leading-relaxed text-sm md:text-base">
-                  We are a professional trading company specializing in ABB and Schneider
-                  Electric electrical components export, serving industrial clients worldwide.
+                  We are a professional trading company based in Hong Kong, specializing
+                  in import and export of various consumer and industrial products.
                 </p>
               </div>
             </div>
