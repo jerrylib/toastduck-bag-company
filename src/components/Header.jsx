@@ -35,7 +35,7 @@ const Header = () => {
             <a className="brand-name block" href="/">
               <img
                 src="/images/toastduck_banner_3x_black.png"
-                alt="Toast Duck Logo"
+                alt="Toastduck Logo"
                 width="120"
                 height="60"
                 className="max-h-[45px] md:max-h-[60px] w-auto"
@@ -45,7 +45,7 @@ const Header = () => {
                 }}
               />
               <span className="hidden text-2xl font-bold text-gray-800">
-                Toast Duck
+                Toastduck Logo
               </span>
             </a>
           </div>

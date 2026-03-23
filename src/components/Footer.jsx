@@ -35,7 +35,7 @@ const Footer = () => {
               <a className="brand mb-6 inline-block" href="/">
                 <img 
                   src="/images/toastduck_banner_3x.png" 
-                  alt="Toast Duck Logo" 
+                  alt="Toastduck Logo" 
                   width="176" 
                   height="88"
                   className="max-h-[60px] w-auto"
@@ -45,7 +45,7 @@ const Footer = () => {
                   }}
                 />
                 <span className="hidden text-2xl font-bold text-white">
-                  Toast Duck
+                  Toastduck Logo
                 </span>
               </a>
               <p className="text-slate-300 mb-6 max-w-md leading-relaxed">
@@ -156,7 +156,7 @@ const Footer = () => {
         <div className="border-t border-slate-800 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-slate-400 text-sm">
-              © {new Date().getFullYear()} Toast Duck International Business Co., Ltd. All rights reserved.
+              © {new Date().getFullYear()} Toastduck International Business Co., Limited. All rights reserved.
             </p>
             <div className="flex space-x-6">
               {quickLinks.map((link, index) => (
