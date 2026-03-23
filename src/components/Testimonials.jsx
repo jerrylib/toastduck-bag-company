@@ -20,13 +20,13 @@ const Testimonials = () => {
       image: "/images/testimonials-1-120x120.jpg"
     },
     {
-      text: "Working with Toast Duck has been an exceptional experience. Their professional approach and attention to detail helped us achieve our business goals faster than we expected. Highly recommended!",
+      text: "Working with Toastduck has been an exceptional experience. Their professional approach and attention to detail helped us achieve our business goals faster than we expected. Highly recommended!",
       author: "Michael Johnson",
       position: "CEO, Tech Solutions",
       image: "/images/testimonials-2-120x120.jpg"
     },
     {
-      text: "The quality of products and services provided by Toast Duck is outstanding. They have been our trusted partner for over two years, and we couldn't be happier with the results.",
+      text: "The quality of products and services provided by Toastduck is outstanding. They have been our trusted partner for over two years, and we couldn't be happier with the results.",
       author: "Sarah Wilson",
       position: "Operations Manager",
       image: "/images/testimonials-3-120x120.jpg"

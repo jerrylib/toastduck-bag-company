@@ -34,11 +34,11 @@ const Footer = () => {
             <div className="lg:col-span-2">
               <a className="brand mb-6 inline-block" href="/">
                 <img 
-                  src="/images/image.png" 
+                  src="/images/toastduck_banner_3x.png" 
                   alt="Toast Duck Logo" 
                   width="176" 
                   height="88"
-                  className="max-h-[60px] w-auto brightness-0 invert"
+                  className="max-h-[60px] w-auto"
                   onError={(e) => {
                     e.target.style.display = 'none';
                     e.target.nextSibling.style.display = 'inline';
@@ -49,7 +49,7 @@ const Footer = () => {
                 </span>
               </a>
               <p className="text-slate-300 mb-6 max-w-md leading-relaxed">
-                Toast Duck International Business Co., Ltd. is a professional international trading company 
+                Toastduck International Business Co., Limited is a professional international trading company 
                 dedicated to delivering high-quality products and exceptional service to clients worldwide.
               </p>
               <div className="flex space-x-4">

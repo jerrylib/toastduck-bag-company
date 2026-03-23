@@ -27,7 +27,7 @@ const About = () => {
       <div className="container px-4">
         {/* H1: Company name + value proposition */}
         <h1 className="heading-decorated text-2xl md:text-3xl font-bold mb-4" style={{display: 'none'}}>
-          Toastduck International Business Co., Ltd. - Professional Import & Export Services
+          Toastduck International Business Co., Limited - Professional Import & Export Services
         </h1>
 
         <div className="row justify-content-md-center align-items-lg-center justify-content-lg-between row-50">

@@ -34,7 +34,7 @@ const Header = () => {
           <div className="rd-navbar-brand flex-shrink-0">
             <a className="brand-name block" href="/">
               <img
-                src="/images/image.png"
+                src="/images/toastduck_banner_3x_black.png"
                 alt="Toast Duck Logo"
                 width="120"
                 height="60"

@@ -266,7 +266,7 @@ const Contact = () => {
             allowFullScreen=""
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-            title="Toast Duck International Business Co., Ltd. Location"
+            title="Toastduck International Business Co., Limited Location"
           ></iframe>
         </div>
       </section>
