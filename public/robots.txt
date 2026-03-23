@@ -1,0 +1,11 @@
+# Robots.txt for Toastduck International Business Co., Ltd.
+# https://toastduck.com
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://toastduck.com/sitemap.xml
+
+# Disallow paths (if needed)
+# Disallow: /private/
