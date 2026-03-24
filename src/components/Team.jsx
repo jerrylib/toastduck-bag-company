@@ -3,27 +3,42 @@ const Team = () => {
     {
       image: "/images/avator1.png",
       name: "Ferris",
-      position: "CEO, Founder"
+      position: "CEO, Founder",
+      socialLinks: [
+        { icon: "fa-facebook", href: "https://www.facebook.com/profile.php?id=61577505150556" },
+        { icon: "fa-twitter", href: "https://x.com/ferrislee911" },
+        { icon: "fa-linkedin", href: "https://www.linkedin.com/in/%E5%BD%AC-%E6%9D%8E-306065255/" },
+        // { icon: "fa-vimeo", href: "#" },
+        // { icon: "fa-youtube", href: "#" },
+        // { icon: "fa-pinterest-p", href: "#" }
+  ]
     },
     {
       image: "/images/avator2.png",
       name: "Linda",
-      position: "CFO"
+      position: "CFO",
+      socialLinks: [
+        // { icon: "fa-facebook", href: "#" },
+        // { icon: "fa-twitter", href: "#" },
+        // { icon: "fa-google-plus", href: "#" },
+        // { icon: "fa-vimeo", href: "#" },
+        // { icon: "fa-youtube", href: "#" },
+        // { icon: "fa-pinterest-p", href: "#" }
+  ]
     },
     {
       image: "/images/avator3.png",
       name: "Kobe",
-      position: "Marketing Manager"
+      position: "Marketing Manager",
+      socialLinks: [
+        // { icon: "fa-facebook", href: "#" },
+        // { icon: "fa-twitter", href: "#" },
+        // { icon: "fa-google-plus", href: "#" },
+        // { icon: "fa-vimeo", href: "#" },
+        // { icon: "fa-youtube", href: "#" },
+        // { icon: "fa-pinterest-p", href: "#" }
+  ]
     }
-  ];
-
-  const socialLinks = [
-    { icon: "fa-facebook", href: "#" },
-    { icon: "fa-twitter", href: "#" },
-    { icon: "fa-google-plus", href: "#" },
-    { icon: "fa-vimeo", href: "#" },
-    { icon: "fa-youtube", href: "#" },
-    { icon: "fa-pinterest-p", href: "#" }
   ];
 
   return (
@@ -54,9 +69,9 @@ const Team = () => {
                   />
                   <div className="thumb-corporate__overlay">
                     <ul className="list-inline-sm thumb-corporate__list">
-                      {socialLinks.map((social, socialIndex) => (
+                      {member.socialLinks.map((social, socialIndex) => (
                         <li key={socialIndex}>
-                          <a className={`icon-sm ${social.icon} icon`} href={social.href}></a>
+                          <a className={`icon-sm ${social.icon} icon`} target="__blank" href={social.href}></a>
                         </li>
                       ))}
                     </ul>
