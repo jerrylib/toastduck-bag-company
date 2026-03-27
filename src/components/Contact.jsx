@@ -127,8 +127,7 @@ const Contact = () => {
                   <dl className="list-terms-inline">
                     <dt className="font-semibold">Address</dt>
                     <dd className="text-sm md:text-base">
-                      Room 906, No.6, Banzhong Road, Fuzhou City, Fujian
-                      Province, China
+                      RM B,UNIT 9,7/F, WAH SHING CENTRE, NO.11 SHING YIP STREET, KWUN TONG, HONG KONG
                     </dd>
                   </dl>
                 </li>
@@ -255,9 +254,9 @@ const Contact = () => {
       <section className="p-0">
         <div className="google-map-container">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2129.717374049382!2d119.32560030219558!3d26.139907931829057!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1szh-CN!2s!4v1752747089758!5m2!1szh-CN!2s"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1845.568578572536!2d114.22453207696954!3d22.310651976554595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3404014550f6a08d%3A0x79b6c25484e016e3!2z5Y2O5oiQ5bel5ZWG5Lit5b-D!5e0!3m2!1szh-CN!2s!4v1774597081958!5m2!1szh-CN!2s"
             width="100%"
-            height="300"
+            height="500"
             className="border-0 block"
             allowFullScreen=""
             loading="lazy"

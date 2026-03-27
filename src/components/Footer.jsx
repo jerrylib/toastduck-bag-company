@@ -118,8 +118,7 @@ const Footer = () => {
                   </svg>
                   <div>
                     <p className="text-slate-300 text-sm leading-relaxed">
-                      Room 906, No.6, Banzhong Road,<br />
-                      Fuzhou City, Fujian Province, China
+                      RM B,UNIT 9,7/F, WAH SHING CENTRE, NO.11 SHING YIP STREET, KWUN TONG, HONG KONG
                     </p>
                   </div>
                 </div>
