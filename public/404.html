@@ -3,31 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Redirecting...</title>
+    <title>Toastduck International – Import & Export Trading Company</title>
+    <meta name="robots" content="noindex" />
     <script>
-      // GitHub Pages SPA redirect hack
-      // This script takes the current URL and redirects to the root with the path as a query parameter
-      var pathSegmentsToKeep = 0;
-      var l = window.location;
-      l.replace(
-        l.protocol +
-          "//" +
-          l.hostname +
-          (l.port ? ":" + l.port : "") +
-          l.pathname
-            .split("/")
-            .slice(0, 1 + pathSegmentsToKeep)
-            .join("/") +
-          "/?/" +
-          l.pathname
-            .slice(1)
-            .split("/")
-            .slice(pathSegmentsToKeep)
-            .join("/")
-            .replace(/&/g, "~and~") +
-          (l.search ? "&" + l.search.slice(1).replace(/&/g, "~and~") : "") +
-          l.hash
-      );
+      // React Router (History API) SPA redirect for GitHub Pages
+      // Rewrite any non-file path back to / so React Router handles it
+      (function () {
+        var l = window.location;
+        var pathname = l.pathname;
+
+        // Skip if the path points to a real file (with extension)
+        if (pathname !== "/" && pathname.match(/\.[^/]+$/)) {
+          return; // let the 404 file request happen normally
+        }
+
+        // Rewrite back to /
+        l.replace(l.protocol + "//" + l.host + "/#" + l.pathname + l.search + l.hash);
+      })();
     </script>
   </head>
   <body>
