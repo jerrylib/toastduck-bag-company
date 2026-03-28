@@ -13,7 +13,7 @@ const Header = () => {
 
   const navItems = [
     { href: '#home', label: 'Home' },
-    { href: 'https://toastduck.com', label: 'Store', external: true },
+    { href: 'https://www.toastduck.com', label: 'Store', external: true },
     { href: '#services', label: 'Services' },
     { href: '#about', label: 'About' },
     { href: '#gallery', label: 'Portfolio' },
