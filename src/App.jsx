@@ -4,7 +4,6 @@ import {
   Preloader,
   Header,
   Home,
-  Tools,
   Footer,
   Modal
 } from './components';
@@ -18,7 +17,6 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/tools" element={<Tools />} />
         </Routes>
         <Footer />
       </div>

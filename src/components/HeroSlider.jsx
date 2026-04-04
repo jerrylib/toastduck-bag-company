@@ -55,11 +55,11 @@ const HeroSlider = () => {
               data-fade="true"
             >
               <div className="container">
-                <div
+                <h1
                   className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-wide'
                 >
                   ABB & Schneider Electric Exporter
-                </div>
+                </h1>
                 <div
                   className="text-width-2 block-centered text-sm sm:text-base md:text-lg lg:text-xl mt-4 md:mt-8 font-bold tracking-wide"
                   data-caption-animate="fadeInUpSmall"
@@ -119,9 +119,9 @@ const HeroSlider = () => {
         >
           <div className="swiper-slide-caption text-center h-full flex">
             <div className="container px-4 py-8 md:py-0 my-auto">
-              <h1 className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-wide' >
-                <span>Global Trade</span>
-              </h1>
+              <h2 className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-wide' >
+                <span>Global Commerce</span>
+              </h2>
               <h3 className='text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold tracking-wide mt-2 md:mt-4'
               >
                 Reliable Export Solutions Since 2015

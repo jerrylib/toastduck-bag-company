@@ -12,4 +12,3 @@ export { default as Footer } from "./Footer";
 export { default as Modal } from "./Modal";
 export { default as Preloader } from "./Preloader";
 export { default as Home } from "./Home";
-export { default as Tools } from "./Tools";

@@ -27,7 +27,7 @@ const Services = () => {
                 <a href="#">
                   <img
                     src={service.image}
-                    alt=""
+                    alt={`${service.title} - Toastduck International Business`}
                     width="652"
                     height="491"
                     className="w-full h-auto object-cover"

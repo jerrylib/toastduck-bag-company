@@ -2,8 +2,8 @@ const About = () => {
   const features = [
     {
       icon: "linear-icon-rocket",
-      title: "Global Trade Expertise",
-      "description": "Years of experience in international trade with streamlined customs and logistics procedures, serving clients worldwide."
+      title: "Global Business Expertise",
+      "description": "Years of experience in international business with streamlined customs and logistics procedures, serving clients worldwide."
     },
     {
       icon: "linear-icon-equalizer",
@@ -25,21 +25,21 @@ const About = () => {
   return (
     <section className="section-lg bg-gray-lighter" id="about">
       <div className="container px-4">
-        {/* H1: Company name + value proposition */}
+         {/* H1: Company name + value proposition */}
         <h1 className="heading-decorated text-2xl md:text-3xl font-bold mb-4" style={{display: 'none'}}>
           Toastduck International Business Co., Limited - Professional Import & Export Services
         </h1>
-
+        
         <div className="row justify-content-md-center align-items-lg-center justify-content-lg-between row-50">
           <div className="col-12 col-md-9 col-lg-6">
             {/* H2: Company Introduction */}
             <h2 className="heading-decorated text-2xl md:text-3xl font-bold">About Us</h2>
             <p className="mt-4 leading-relaxed text-sm md:text-base">
               Welcome to Toastduck International Business Co., Limited, a professional
-              trading company established in Hong Kong. We specialize in import and export
+              international business enterprise established in Hong Kong. We specialize in import and export
               services covering e-commerce, electronic components, hardware, clothing and
               footwear, bags and luggage, and sports equipment. With extensive experience
-              in international trade and a strong network of suppliers and clients worldwide,
+              in global commerce and a strong network of suppliers and clients worldwide,
               we are your trusted partner for quality products and reliable service. Our
               commitment to quality, competitive pricing, and reliable delivery has made
               us a preferred partner for businesses across the globe.
@@ -48,7 +48,7 @@ const About = () => {
             {/* H2: Core Business */}
             <h3 className="text-xl font-bold mt-6 mb-3">Our Business Scope</h3>
             <ul className="list-disc pl-5 mb-4">
-              <li>E-commerce Trading</li>
+              <li>E-commerce Business</li>
               <li>Electronic Components Export</li>
               <li>Hardware Products</li>
               <li>Clothing, Footwear & Accessories</li>
@@ -98,7 +98,7 @@ const About = () => {
                   </a>
                 </h3>
                 <p className="leading-relaxed text-sm md:text-base">
-                  We are a professional trading company based in Hong Kong, specializing
+                  We are a professional international business enterprise based in Hong Kong, specializing
                   in import and export of various consumer and industrial products.
                 </p>
               </div>

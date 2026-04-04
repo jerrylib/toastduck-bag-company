@@ -49,7 +49,7 @@ const Footer = () => {
                 </span>
               </a>
               <p className="text-slate-300 mb-6 max-w-md leading-relaxed">
-                Toastduck International Business Co., Limited is a professional international trading company 
+                Toastduck International Business Co., Limited is a professional international business enterprise 
                 dedicated to delivering high-quality products and exceptional service to clients worldwide.
               </p>
               <div className="flex space-x-4">
