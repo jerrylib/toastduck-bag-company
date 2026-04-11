@@ -56,7 +56,7 @@ const NewsDetail = () => {
       <div className="container px-4">
         <div className="row justify-content-center">
           <div className="col-12 col-lg-10 col-xl-8">
-            <Link to="/news" className="inline-block mb-4 text-sky-500 hover:text-sky-600 no-underline">
+            <Link to="/news" className="inline-block my-4 text-sky-500 hover:text-sky-600 no-underline">
               &larr; Back to News
             </Link>
             {article.urlToImage && (

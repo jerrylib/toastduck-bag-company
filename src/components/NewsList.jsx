@@ -23,9 +23,7 @@ const NewsList = () => {
     const fetchNews = async () => {
       try {
         setLoading(true);
-        const response = await fetch(
-          `https://newsapi.org/v2/everything?q=(ABB OR "Schneider Electric" OR "SIEMENS") AND (automation OR "electrical equipment" OR "MCB" OR "circuit breaker")&language=en&sortBy=publishedAt&apiKey=${import.meta.env.VITE_NEWS_API_KEY}`
-        );
+        const response = await fetch('https://company.toastduck.com/news/data.json');
         if (!response.ok) {
           throw new Error('Failed to fetch news');
         }
