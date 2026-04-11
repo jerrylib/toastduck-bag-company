@@ -13,6 +13,24 @@ const NewsDetail = () => {
     }
   }, [article, id]);
 
+  useEffect(() => {
+    if (article) {
+      const title = article.title ? `${article.title} | Toastduck` : 'News Detail | Toastduck';
+      const description = article.description || 'Read the latest industry news on ABB, Schneider Electric, and electrical equipment.';
+      const image = article.urlToImage || '';
+
+      document.title = title;
+      document.querySelector('meta[name="description"]')?.setAttribute('content', description);
+      document.querySelector('meta[property="og:title"]')?.setAttribute('content', title);
+      document.querySelector('meta[property="og:url"]')?.setAttribute('content', window.location.href);
+      document.querySelector('meta[property="og:description"]')?.setAttribute('content', description);
+      document.querySelector('meta[property="og:image"]')?.setAttribute('content', image);
+      document.querySelector('meta[name="twitter:title"]')?.setAttribute('content', title);
+      document.querySelector('meta[name="twitter:description"]')?.setAttribute('content', description);
+      document.querySelector('meta[name="twitter:image"]')?.setAttribute('content', image);
+    }
+  }, [article]);
+
   if (loading) {
     return (
       <section className="section-lg bg-gray-50 min-h-[400px]">

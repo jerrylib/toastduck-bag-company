@@ -8,6 +8,18 @@ const NewsList = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
+    // SEO updates
+    document.title = 'Industry News - ABB & Schneider Electric | Toastduck';
+    document.querySelector('meta[name="description"]')?.setAttribute('content', 'Stay updated with the latest industry news on ABB, Schneider Electric, Siemens, automation, and electrical equipment from Toastduck.');
+    document.querySelector('link[rel="canonical"]')?.setAttribute('href', window.location.href);
+    document.querySelector('meta[property="og:title"]')?.setAttribute('content', 'Industry News - ABB & Schneider Electric | Toastduck');
+    document.querySelector('meta[property="og:url"]')?.setAttribute('content', window.location.href);
+    document.querySelector('meta[property="og:description"]')?.setAttribute('content', 'Stay updated with the latest industry news on ABB, Schneider Electric, Siemens, automation, and electrical equipment.');
+    document.querySelector('meta[name="twitter:title"]')?.setAttribute('content', 'Industry News - ABB & Schneider Electric | Toastduck');
+    document.querySelector('meta[name="twitter:description"]')?.setAttribute('content', 'Stay updated with the latest industry news on ABB, Schneider Electric, Siemens, automation, and electrical equipment.');
+  }, []);
+
+  useEffect(() => {
     const fetchNews = async () => {
       try {
         setLoading(true);
