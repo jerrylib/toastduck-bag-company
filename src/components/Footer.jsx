@@ -4,11 +4,10 @@ const Footer = () => {
   const navigate = useNavigate();
 
   const socialLinks = [
-    { icon: "fa-facebook", href: "#", name: "Facebook" },
-    { icon: "fa-twitter", href: "#", name: "Twitter" },
-    { icon: "fa-linkedin", href: "#", name: "LinkedIn" },
-    { icon: "fa-instagram", href: "#", name: "Instagram" },
-    { icon: "fa-youtube", href: "#", name: "YouTube" }
+    { icon: "fa-facebook", href: "https://www.facebook.com/profile.php?id=61577505150556", name: "Facebook" },
+    { icon: "fa-twitter", href: "https://x.com/ferrislee911", name: "Twitter" },
+    { icon: "fa-linkedin", href: "https://www.linkedin.com/in/%E5%BD%AC-%E6%9D%8E-306065255/", name: "LinkedIn" },
+    { icon: "fa-youtube", href: "https://www.youtube.com/@ferris-gogogo", name: "YouTube" }
   ];
 
   const navLinks = [
