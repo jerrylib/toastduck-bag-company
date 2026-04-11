@@ -6,6 +6,8 @@ export { default as About } from "./About";
 export { default as Portfolio } from "./Portfolio";
 export { default as Team } from "./Team";
 export { default as News } from "./News";
+export { default as NewsDetail } from "./NewsDetail";
+export { default as NewsList } from "./NewsList";
 export { default as Testimonials } from "./Testimonials";
 export { default as Contact } from "./Contact";
 export { default as Footer } from "./Footer";
