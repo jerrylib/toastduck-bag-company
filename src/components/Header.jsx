@@ -1,7 +1,33 @@
 import React, { useState } from 'react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const handleAnchorClick = (href, anchor) => {
+    if (location.pathname !== '/') {
+      navigate('/');
+      setTimeout(() => {
+        const element = document.getElementById(anchor);
+        if (element) element.scrollIntoView({ behavior: 'smooth' });
+      }, 300);
+    } else {
+      const element = document.getElementById(anchor);
+      if (element) element.scrollIntoView({ behavior: 'smooth' });
+    }
+    setIsMenuOpen(false);
+  };
+
+  const handleNavClick = (item) => {
+    if (item.route) {
+      navigate(item.href);
+      setIsMenuOpen(false);
+    } else if (item.anchor) {
+      handleAnchorClick(item.href, item.anchor);
+    }
+  };
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -12,15 +38,15 @@ const Header = () => {
   };
 
   const navItems = [
-    { href: '#home', label: 'Home' },
+    { href: '/', label: 'Home', anchor: 'home' },
     { href: 'https://www.toastduck.com', label: 'Store', external: true },
-    { href: '#services', label: 'Services' },
-    { href: '#about', label: 'About' },
-    { href: '#gallery', label: 'Portfolio' },
-    { href: '#team', label: 'Team' },
-    { href: '#news', label: 'News' },
-    { href: '#clients', label: 'Clients' },
-    { href: '#contacts', label: 'Contacts' },
+    { href: '/', label: 'Services', anchor: 'services' },
+    { href: '/', label: 'About', anchor: 'about' },
+    { href: '/', label: 'Portfolio', anchor: 'gallery' },
+    { href: '/', label: 'Team', anchor: 'team' },
+    { href: '/', label: 'News', anchor: 'news' },
+    { href: '/', label: 'Clients', anchor: 'clients' },
+    { href: '/', label: 'Contacts', anchor: 'contacts' },
   ];
 
   return (
@@ -71,7 +97,7 @@ const Header = () => {
           <div className="hidden md:flex items-center gap-4 lg:gap-8">
             <ul className="rd-navbar-nav flex m-0 p-0 gap-4 lg:gap-6">
               {navItems.map((item) => (
-                <li key={item.href} className="flex">
+                <li key={item.label} className="flex">
                   {item.external ? (
                     <a
                       href={item.href}
@@ -82,12 +108,13 @@ const Header = () => {
                       {item.label}
                     </a>
                   ) : (
-                    <a
-                      href={item.href}
-                      className="text-black content-center hover:text-sky-400 transition-colors duration-200 text-sm lg:text-base whitespace-nowrap"
+                    <button
+                      type="button"
+                      onClick={() => handleNavClick(item)}
+                      className="text-black content-center hover:text-sky-400 transition-colors duration-200 text-sm lg:text-base whitespace-nowrap bg-transparent border-0 p-0 cursor-pointer"
                     >
                       {item.label}
-                    </a>
+                    </button>
                   )}
                 </li>
               ))}
@@ -106,7 +133,7 @@ const Header = () => {
           >
             <ul className="rd-navbar-nav flex flex-col p-6 gap-4">
               {navItems.map((item) => (
-                <li key={item.href} className="flex border-b border-gray-100 pb-3">
+                <li key={item.label} className="flex border-b border-gray-100 pb-3">
                   {item.external ? (
                     <a
                       href={item.href}
@@ -118,13 +145,13 @@ const Header = () => {
                       {item.label}
                     </a>
                   ) : (
-                    <a
-                      href={item.href}
-                      className="text-black hover:text-sky-400 transition-colors duration-200 text-lg"
-                      onClick={closeMenu}
+                    <button
+                      type="button"
+                      onClick={() => handleNavClick(item)}
+                      className="text-black hover:text-sky-400 transition-colors duration-200 text-lg bg-transparent border-0 p-0 cursor-pointer text-left"
                     >
                       {item.label}
-                    </a>
+                    </button>
                   )}
                 </li>
               ))}

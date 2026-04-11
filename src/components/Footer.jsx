@@ -1,4 +1,8 @@
+import { useNavigate } from 'react-router-dom';
+
 const Footer = () => {
+  const navigate = useNavigate();
+
   const socialLinks = [
     { icon: "fa-facebook", href: "#", name: "Facebook" },
     { icon: "fa-twitter", href: "#", name: "Twitter" },
@@ -8,14 +12,31 @@ const Footer = () => {
   ];
 
   const navLinks = [
-    { text: "Home", href: "#home" },
-    { text: "Services", href: "#services" },
-    { text: "About", href: "#about" },
-    { text: "Portfolio", href: "#gallery" },
-    { text: "Team", href: "#team" },
-    { text: "News", href: "#news" },
-    { text: "Contact", href: "#contacts" }
+    { text: "Home", href: "/", anchor: "home" },
+    { text: "Services", href: "/", anchor: "services" },
+    { text: "About", href: "/", anchor: "about" },
+    { text: "Portfolio", href: "/", anchor: "gallery" },
+    { text: "Team", href: "/", anchor: "team" },
+    { text: "News", href: "/news", route: true },
+    { text: "Contact", href: "/", anchor: "contacts" }
   ];
+
+  const handleNavClick = (link) => {
+    if (link.route) {
+      navigate(link.href);
+    } else if (link.anchor) {
+      if (window.location.pathname !== '/') {
+        navigate('/');
+        setTimeout(() => {
+          const element = document.getElementById(link.anchor);
+          if (element) element.scrollIntoView({ behavior: 'smooth' });
+        }, 300);
+      } else {
+        const element = document.getElementById(link.anchor);
+        if (element) element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  };
 
   const quickLinks = [
     { text: "Privacy Policy", href: "#" },
@@ -96,12 +117,13 @@ const Footer = () => {
               <ul className="space-y-3">
                 {navLinks.map((link, index) => (
                   <li key={index}>
-                    <a 
-                      href={link.href}
-                      className="text-slate-300 hover:text-white transition-colors duration-300"
+                    <button
+                      type="button"
+                      onClick={() => handleNavClick(link)}
+                      className="text-slate-300 hover:text-white transition-colors duration-300 bg-transparent border-0 p-0 cursor-pointer text-left"
                     >
                       {link.text}
-                    </a>
+                    </button>
                   </li>
                 ))}
               </ul>

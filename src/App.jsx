@@ -4,6 +4,8 @@ import {
   Preloader,
   Header,
   Home,
+  NewsList,
+  NewsDetail,
   Footer,
   Modal
 } from './components';
@@ -17,6 +19,8 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/news" element={<NewsList />} />
+          <Route path="/news/:id" element={<NewsDetail />} />
         </Routes>
         <Footer />
       </div>
