@@ -1,7 +1,8 @@
 {
   "permissions": {
     "allow": [
-      "WebFetch(domain:newsapi.org)"
+      "WebFetch(domain:newsapi.org)",
+      "Bash(npm run:*)"
     ]
   }
 }

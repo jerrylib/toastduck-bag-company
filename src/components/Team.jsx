@@ -1,17 +1,12 @@
+import { socialLinks } from '../config/social';
+
 const Team = () => {
   const teamMembers = [
     {
       image: "/images/avator1.png",
       name: "Ferris",
       position: "CEO, Founder",
-      socialLinks: [
-        { icon: "fa-facebook", href: "https://www.facebook.com/profile.php?id=61577505150556" },
-        { icon: "fa-twitter", href: "https://x.com/ferrislee911" },
-        { icon: "fa-linkedin", href: "https://www.linkedin.com/in/%E5%BD%AC-%E6%9D%8E-306065255/" },
-        { icon: "fa-youtube", href: "https://www.youtube.com/@ferris-gogogo" },
-        // { icon: "fa-vimeo", href: "#" },
-        // { icon: "fa-pinterest-p", href: "#" }
-  ]
+      socialLinks: socialLinks,
     },
     {
       image: "/images/avator2.png",

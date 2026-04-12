@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { socialLinks } from '../config/social';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -159,12 +160,11 @@ const Contact = () => {
                 </li>
                 <li className="mt-4">
                   <ul className="list-inline-sm flex flex-wrap gap-3">
-                    <li><a className="icon-sm fa-facebook icon text-sky-600" href="https://www.facebook.com/profile.php?id=61577505150556"></a></li>
-                    <li><a className="icon-sm fa-twitter icon text-sky-600" href="https://x.com/ferrislee911"></a></li>
-                    <li>
-                      <a className="icon-sm fa-linkedin icon text-sky-600" href="https://www.linkedin.com/in/%E5%BD%AC-%E6%9D%8E-306065255/"></a>
-                    </li>
-                    <li><a className="icon-sm fa-youtube icon text-sky-600" href="https://www.youtube.com/@ferris-gogogo"></a></li>
+                    {socialLinks.map((social, index) => (
+                      <li key={index}>
+                        <a className={`icon-sm ${social.icon} icon text-sky-600`} href={social.href}></a>
+                      </li>
+                    ))}
                   </ul>
                 </li>
               </ul>
