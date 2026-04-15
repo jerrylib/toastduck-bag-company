@@ -22,8 +22,8 @@ const Team = () => {
   ]
     },
     {
-      image: "/images/avator3.png",
-      name: "Kobe",
+      image: "/images/avator2.jpg",
+      name: "Cassie",
       position: "Marketing Manager",
       socialLinks: [
         // { icon: "fa-facebook", href: "#" },
