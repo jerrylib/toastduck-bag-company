@@ -28,7 +28,9 @@ const Portfolio = () => {
 
   return (
     <section className="section-lg bg-default text-center" id="gallery">
-      <h4 className="heading-decorated text-2xl md:text-3xl font-bold">Our Products</h4>
+      <div className="text-center mb-8">
+        <h4 className="heading-decorated text-2xl md:text-3xl font-bold">Our Products</h4>
+      </div>
       <div className="container px-4">
         <div className="isotope-wrap row row-70">
           <div className="col-sm-12" data-lightgallery="group">
@@ -67,6 +69,14 @@ const Portfolio = () => {
             </div>
           </div>
         </div>
+      </div>
+      <div className="text-center mt-8">
+        <a
+          href="/products"
+          className="inline-block text-sm font-normal px-4 py-2 bg-sky-700 text-white rounded hover:bg-sky-800 transition-colors duration-200 whitespace-nowrap"
+        >
+          View All
+        </a>
       </div>
     </section>
   );
