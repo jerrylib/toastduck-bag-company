@@ -26,6 +26,8 @@ const Team = () => {
       name: "Cassie",
       position: "Marketing Manager",
       socialLinks: [
+        { icon: "fa-facebook", href: "https://www.facebook.com/share/1GdhtaFmfF/?mibextid=wwXIfr" },
+        { icon: "fa-linkedin", href: "https://www.linkedin.com/in/cassie-huang-791537323/" },
         // { icon: "fa-facebook", href: "#" },
         // { icon: "fa-twitter", href: "#" },
         // { icon: "fa-google-plus", href: "#" },
