@@ -11,7 +11,7 @@ const Team = () => {
     {
       image: "/images/avator2.png",
       name: "Linda",
-      position: "CFO",
+      position: "E-commerce Operations Manager",
       socialLinks: [
         // { icon: "fa-facebook", href: "#" },
         // { icon: "fa-twitter", href: "#" },
@@ -28,6 +28,7 @@ const Team = () => {
       socialLinks: [
         { icon: "fa-facebook", href: "https://www.facebook.com/share/1GdhtaFmfF/?mibextid=wwXIfr" },
         { icon: "fa-linkedin", href: "https://www.linkedin.com/in/cassie-huang-791537323/" },
+        { icon: "fa-whatsapp", href: "https://wa.me/8613459831691" },
         // { icon: "fa-facebook", href: "#" },
         // { icon: "fa-twitter", href: "#" },
         // { icon: "fa-google-plus", href: "#" },

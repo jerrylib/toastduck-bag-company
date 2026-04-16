@@ -3,6 +3,7 @@ export const socialConfig = {
   twitter: "https://x.com/ferrislee911",
   linkedin: "https://www.linkedin.com/company/%E5%A4%9A%E5%A3%AB%E9%81%94%E5%9C%8B%E9%9A%9B%E5%95%86%E5%8B%99%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8/?viewAsMember=true",
   youtube: "https://www.youtube.com/@ferris-gogogo",
+  whatsapp: "https://wa.me/8617605010609",
 };
 
 export const socialLinks = [
@@ -10,4 +11,5 @@ export const socialLinks = [
   { icon: "fa-twitter", href: socialConfig.twitter, name: "Twitter" },
   { icon: "fa-linkedin", href: socialConfig.linkedin, name: "LinkedIn" },
   { icon: "fa-youtube", href: socialConfig.youtube, name: "YouTube" },
+  { icon: "fa-whatsapp", href: socialConfig.whatsapp, name: "WhatsApp" },
 ];
