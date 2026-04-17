@@ -7,7 +7,8 @@ import {
   NewsList,
   NewsDetail,
   Footer,
-  Modal
+  Modal,
+  ProductList
 } from './components';
 import './App.css';
 
@@ -21,6 +22,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/news" element={<NewsList />} />
           <Route path="/news/:id" element={<NewsDetail />} />
+          <Route path="/products" element={<ProductList />} />
         </Routes>
         <Footer />
       </div>

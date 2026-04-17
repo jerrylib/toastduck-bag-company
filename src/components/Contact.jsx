@@ -137,7 +137,7 @@ const Contact = () => {
                     <dt className="font-semibold">Whatsapp</dt>
                     <dd>
                       <ul className="list-semicolon">
-                        <li><a href="tel:+8617605010609" className="text-sm md:text-base">(+86) 17605010609</a></li>
+                        <li><a target='__blank' href="https://wa.me/8617605010609" className="text-sm md:text-base">(+86) 17605010609</a></li>
                       </ul>
                     </dd>
                   </dl>
