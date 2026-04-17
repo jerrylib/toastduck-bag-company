@@ -111,7 +111,7 @@ const ProductList = () => {
   };
 
   return (
-    <section className="section-lg bg-default">
+    <section className="section-lg bg-default mt-[30px]">
       <div className="container mx-auto px-4">
         {/* Tabs */}
         <div className="flex justify-center gap-2 md:gap-4 mb-8">
