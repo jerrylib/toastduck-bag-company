@@ -70,14 +70,6 @@ const Portfolio = () => {
           </div>
         </div>
       </div>
-      <div className="text-center mt-8">
-        <a
-          href="/products"
-          className="inline-block text-sm font-normal px-4 py-2 bg-sky-700 text-white rounded hover:bg-sky-800 transition-colors duration-200 whitespace-nowrap"
-        >
-          View All
-        </a>
-      </div>
     </section>
   );
 };

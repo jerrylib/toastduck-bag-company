@@ -1,3 +1,41 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .ui-to-top-products {
+    position: fixed;
+    right: 40px;
+    bottom: 100px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 20;
+    transition: 0.3s all ease;
+    color: #fff;
+    background: oklch(76.8% 0.233 130.85);
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
+  }
+
+  .ui-to-top-products:hover {
+    color: #fff;
+    background: oklch(53.2% 0.157 131.589);
+  }
+
+  .ui-to-top-products:focus {
+    outline: 0;
+  }
+
+  @media (max-width: 575.98px) {
+    .ui-to-top-products {
+      right: 15px;
+      bottom: 75px;
+      width: 50px;
+      height: 50px;
+    }
+  }
+}
