@@ -8,9 +8,29 @@ const NewsDetail = () => {
   const [loading, setLoading] = useState(!article);
 
   useEffect(() => {
-    if (!article && id) {
-      setLoading(false);
-    }
+    const fetchArticle = async () => {
+      if (!article && id) {
+        try {
+          const response = await fetch('/news/data.json');
+          if (response.ok) {
+            const data = await response.json();
+            const decodedId = decodeURIComponent(id);
+            const foundArticle = (data.articles || []).find(
+              (a) => a.url === decodedId
+            );
+            if (foundArticle) {
+              setArticle(foundArticle);
+            }
+          }
+        } catch (err) {
+          console.error('Failed to fetch article:', err);
+        } finally {
+          setLoading(false);
+        }
+      }
+    };
+
+    fetchArticle();
   }, [article, id]);
 
   useEffect(() => {
