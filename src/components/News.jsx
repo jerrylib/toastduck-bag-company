@@ -11,7 +11,7 @@ const News = () => {
     const fetchNews = async () => {
       try {
         setLoading(true);
-        const response = await fetch('https://company.toastduck.com/news/data.json');
+        const response = await fetch('/news/data.json');
         if (!response.ok) {
           throw new Error('Failed to fetch news');
         }
@@ -80,9 +80,6 @@ const News = () => {
                     width="418"
                     height="315"
                     className="w-full h-[200px] object-cover rounded-lg"
-                    onError={(e) => {
-                      e.target.src = '/images/android-chrome-192x192.png';
-                    }}
                   />
                 </button>
                 <div className="flex-1 flex flex-col">

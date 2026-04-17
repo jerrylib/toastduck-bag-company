@@ -81,22 +81,11 @@ const NewsDetail = () => {
               </div>
             </div>
             <div className="post-classic-body">
-              <p className="text-base leading-relaxed text-gray-700 whitespace-pre-line">
-                {article.content || article.description}
-              </p>
+              <div
+                className="text-base leading-relaxed text-gray-700"
+                dangerouslySetInnerHTML={{ __html: article.content || article.description }}
+              />
             </div>
-            {article.url && (
-              <div className="mt-6">
-                <a
-                  href={article.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block px-6 py-3 bg-sky-500 text-white rounded hover:bg-sky-600 transition-colors"
-                >
-                  Read Full Article
-                </a>
-              </div>
-            )}
           </div>
         </div>
       </div>

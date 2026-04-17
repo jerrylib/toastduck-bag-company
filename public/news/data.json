@@ -1,0 +1,19 @@
+{
+    "status": "ok",
+    "totalResults": 1,
+    "articles": [
+        {
+            "source": {
+                "id": null,
+                "name": "Official Announcement"
+            },
+            "author": "E-commerce Operations Manager",
+            "title": "Mid-Year Sale is Here!",
+            "description": "To thank our valued customers, we are holding a grand mid-year promotion from April 16 to April 22, 2026. Enjoy up to 3% off on select products!",
+            "url": "1",
+            "urlToImage": "https://images.toastduck.fun/Gemini_Generated_Image_ooi6iiooi6iiooi6-01KPCQA4QYGD1F1S6S9ZBF58BY.png",
+            "publishedAt": "2026-04-16T08:00:00.000Z",
+            "content": "<h2>Mid-Year Sale</h2><img src=\"https://images.toastduck.fun/mid-year%20big%20sales-01KPCQA4QZ85C03EWK7P96JCBX.png\" alt=\"Mid-Year Sale Banner\" style=\"width:100%;max-width:600px;\" /><p><strong>Promotion Period:</strong> April 16, 2026 08:00:00 to April 22, 2026 08:00:00 (UTC)</p><p>During the sale, enjoy <strong>up to 3% off</strong> on select products! Popular items available for limited-time flash deals. Stack coupons for extra savings!</p><h3>Rules:</h3><ol><li>Orders placed during the promotion period are eligible</li><li>Limited stock - first come, first served</li><li>Store coupons can be combined with platform coupons</li><li>Final interpretation belongs to the company</li></ol><p><em>Shop now before it's gone!</em></p>"
+        }
+    ]
+}
