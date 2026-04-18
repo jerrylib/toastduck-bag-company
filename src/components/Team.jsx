@@ -9,8 +9,8 @@ const Team = () => {
       socialLinks: socialLinks,
     },
     {
-      image: "/images/avator2.png",
-      name: "Linda",
+      image: "/images/avator3.png",
+      name: "Jenny",
       position: "E-commerce Operations Manager",
       socialLinks: [
         // { icon: "fa-facebook", href: "#" },
@@ -19,6 +19,7 @@ const Team = () => {
         // { icon: "fa-vimeo", href: "#" },
         // { icon: "fa-youtube", href: "#" },
         // { icon: "fa-pinterest-p", href: "#" }
+        { icon: "fa-whatsapp", href: "https://wa.me/8613720881796" },
   ]
     },
     {
