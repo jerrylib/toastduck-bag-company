@@ -13,7 +13,7 @@ const Team = () => {
       name: "Jenny",
       position: "E-commerce Operations Manager",
       socialLinks: [
-        // { icon: "fa-facebook", href: "#" },
+        { icon: "fa-facebook", href: "https://www.facebook.com/profile.php?id=100092165776596" },
         // { icon: "fa-twitter", href: "#" },
         // { icon: "fa-google-plus", href: "#" },
         // { icon: "fa-vimeo", href: "#" },
