@@ -36,7 +36,7 @@ const NewsDetail = () => {
   useEffect(() => {
     if (article) {
       const title = article.title ? `${article.title} | Toastduck` : 'News Detail | Toastduck';
-      const description = article.description || 'Read the latest industry news on ABB, Schneider Electric, and electrical equipment.';
+      const description = article.description || 'Read the latest industry news on bags, luggage, clothing, and fashion apparel trends from Toastduck.';
       const image = article.urlToImage || '';
 
       document.title = title;

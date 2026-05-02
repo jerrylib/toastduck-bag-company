@@ -37,8 +37,8 @@ const About = () => {
             <p className="mt-4 leading-relaxed text-sm md:text-base">
               Welcome to Toastduck International Business Co., Limited, a professional
               international business enterprise established in Hong Kong. We specialize in import and export
-              services covering e-commerce, electronic components, hardware, clothing and
-              footwear, bags and luggage, and sports equipment. With extensive experience
+              services covering e-commerce, bags and luggage, clothing and
+              footwear, and sports equipment. With extensive experience
               in global commerce and a strong network of suppliers and clients worldwide,
               we are your trusted partner for quality products and reliable service. Our
               commitment to quality, competitive pricing, and reliable delivery has made
@@ -48,11 +48,9 @@ const About = () => {
             {/* H2: Core Business */}
             <h3 className="text-xl font-bold mt-6 mb-3">Our Business Scope</h3>
             <ul className="list-disc pl-5 mb-4">
-              <li>E-commerce Business</li>
-              <li>Electronic Components Export</li>
-              <li>Hardware Products</li>
+              <li>Bags and Luggage Export</li>
+              <li>Clothing and Fashion Apparel</li>
               <li>Clothing, Footwear & Accessories</li>
-              <li>Bags and Luggage</li>
               <li>Sports Equipment</li>
             </ul>
 

@@ -39,7 +39,7 @@ const Header = () => {
 
   const navItems = [
     { href: '/', label: 'Home', anchor: 'home' },
-    { href: 'https://www.toastduck.com', label: 'Store', external: true },
+    // { href: 'https://www.toastduck.com', label: 'Store', external: true },
     { href: '/', label: 'Services', anchor: 'services' },
     { href: '/', label: 'About', anchor: 'about' },
     { href: '/', label: 'Portfolio', anchor: 'gallery' },

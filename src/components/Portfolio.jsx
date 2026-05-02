@@ -1,28 +1,28 @@
 const Portfolio = () => {
   const products = [
     {
-      image: "/images/product1.webp",
-      title: "ABB SACET1N160 series",
+      image: "/images/1.png",
+      title: "",
     },
     {
-      image: "/images/product2.webp",
-      title: "ABB Leakage circuit breaker",
+      image: "/images/6.png",
+      title: "",
     },
     {
-      image: "/images/product3.webp",
-      title: "ABB XT series",
+      image: "/images/4.png",
+      title: "",
     },
     {
-      image: "/images/product4.webp",
-      title: "Schneider Leakage circuit breaker",
+      image: "/images/3.png",
+      title: "",
     },
     {
-      image: "/images/product5.webp",
-      title: "ABB F200 series",
+      image: "/images/2.png",
+      title: "",
     },
     {
-      image: "/images/product6.png",
-      title: "Siemens series",
+      image: "/images/5.png",
+      title: "",
     }
   ];
 

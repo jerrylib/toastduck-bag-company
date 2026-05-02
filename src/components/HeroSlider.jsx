@@ -58,14 +58,14 @@ const HeroSlider = () => {
                 <h1
                   className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-wide'
                 >
-                  ABB & Schneider Electric Exporter
+                  Import & Export Bags & Clothing
                 </h1>
                 <div
                   className="text-width-2 block-centered text-sm sm:text-base md:text-lg lg:text-xl mt-4 md:mt-8 font-bold tracking-wide"
                   data-caption-animate="fadeInUpSmall"
                   data-caption-delay="200"
                 >
-                  Your trusted partner for industrial electrical components export worldwide.
+                  Your trusted partner for international bags and clothing export worldwide.
                 </div>
                 <div className="group-lg group-middle">
                   <a
@@ -97,11 +97,11 @@ const HeroSlider = () => {
             <div className="container my-auto md:mt-16 px-4">
               <h2 className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-wide'
               >
-                Premium Electrical
+                Premium Bags & Clothing
                 <br className="hidden md:block" />
-                Components Export
+                Export Solutions
               </h2>
-              <p className="text-sm md:text-xl mt-2 md:mt-4">Authorized distributor of ABB and Schneider Electric products</p>
+              <p className="text-sm md:text-xl mt-2 md:mt-4">Leading exporter of premium bags, luggage, and fashion apparel</p>
               <a
                 className="btn btn-primary mt-4 md:mt-6 text-sm md:text-base px-4 md:px-6 py-2 md:py-3 inline-flex items-center justify-center"
                 data-caption-animate="fadeInLeftSmall"

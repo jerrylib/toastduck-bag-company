@@ -2,13 +2,13 @@ const Services = () => {
   const services = [
     {
       image: "/images/service-1-652x491.jpg",
-      title: "ABB Products Export",
-      description: "We specialize in exporting a wide range of ABB electrical components including circuit breakers, relays, contactors, and automation solutions."
+      title: "Bags & Luggage Export",
+      description: "We specialize in exporting a wide range of premium bags and luggage including travel bags, backpacks, handbags, and fashion accessories."
     },
     {
       image: "/images/service-2-652x491.jpg",
-      title: "Schneider Electric Products",
-      description: "Authorized exporter of Schneider Electric products including power distribution equipment, industrial automation, and building management systems."
+      title: "Fashion Clothing Export",
+      description: "We export a wide variety of fashion clothing including casual wear, formal attire, sportswear, and custom apparel for global markets."
     },
     {
       image: "/images/service-3-652x491.jpg",
