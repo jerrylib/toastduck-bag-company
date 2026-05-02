@@ -1,7 +1,7 @@
 const Portfolio = () => {
   const products = [
     {
-      image: "/images/1.png",
+      image: "/images/5.png",
       title: "",
     },
     {
@@ -9,7 +9,11 @@ const Portfolio = () => {
       title: "",
     },
     {
-      image: "/images/4.png",
+      image: "/images/2.png",
+      title: "",
+    },
+    {
+      image: "/images/1.png",
       title: "",
     },
     {
@@ -17,11 +21,7 @@ const Portfolio = () => {
       title: "",
     },
     {
-      image: "/images/2.png",
-      title: "",
-    },
-    {
-      image: "/images/5.png",
+      image: "/images/4.png",
       title: "",
     }
   ];
