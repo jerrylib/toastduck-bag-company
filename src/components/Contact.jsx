@@ -91,7 +91,7 @@ const Contact = () => {
           <div className="row justify-content-md-center">
             <div className="col-12 col-md-11 col-lg-9 col-xl-8">
               <h3 className="heading-decorated text-2xl md:text-3xl lg:text-4xl xl:text-5xl tracking-wide leading-tight md:leading-16 font-bold">
-                Get high-quality ABB & Schneider Electric components for your projects!
+                Get high-quality bags, luggage, and fashion apparel for your business!
               </h3>
               <a
                 className="btn btn-primary mt-6 md:mt-8"

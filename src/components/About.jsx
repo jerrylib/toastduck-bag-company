@@ -27,7 +27,7 @@ const About = () => {
       <div className="container px-4">
          {/* H1: Company name + value proposition */}
         <h1 className="heading-decorated text-2xl md:text-3xl font-bold mb-4" style={{display: 'none'}}>
-          Toastduck International Business Co., Limited - Professional Import & Export Services
+          Toastduck International Business Co., Limited - Professional Export Services
         </h1>
         
         <div className="row justify-content-md-center align-items-lg-center justify-content-lg-between row-50">
@@ -36,9 +36,8 @@ const About = () => {
             <h2 className="heading-decorated text-2xl md:text-3xl font-bold">About Us</h2>
             <p className="mt-4 leading-relaxed text-sm md:text-base">
               Welcome to Toastduck International Business Co., Limited, a professional
-              international business enterprise established in Hong Kong. We specialize in import and export
-              services covering e-commerce, bags and luggage, clothing and
-              footwear, and sports equipment. With extensive experience
+              international business enterprise established in Hong Kong. We specialize in export
+              services covering e-commerce and bags and luggage, clothing. With extensive experience
               in global commerce and a strong network of suppliers and clients worldwide,
               we are your trusted partner for quality products and reliable service. Our
               commitment to quality, competitive pricing, and reliable delivery has made
@@ -50,8 +49,6 @@ const About = () => {
             <ul className="list-disc pl-5 mb-4">
               <li>Bags and Luggage Export</li>
               <li>Clothing and Fashion Apparel</li>
-              <li>Clothing, Footwear & Accessories</li>
-              <li>Sports Equipment</li>
             </ul>
 
             {/* H2: Why Choose Us */}
@@ -97,7 +94,7 @@ const About = () => {
                 </h3>
                 <p className="leading-relaxed text-sm md:text-base">
                   We are a professional international business enterprise based in Hong Kong, specializing
-                  in import and export of various consumer and industrial products.
+                  in export of various consumer and industrial products.
                 </p>
               </div>
             </div>

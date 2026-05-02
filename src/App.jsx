@@ -37,13 +37,13 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/news" element={<NewsList />} />
           <Route path="/news/:id" element={<NewsDetail />} />
-          <Route path="/products" element={<ProductList />} />
+          {/* <Route path="/products" element={<ProductList />} /> */}
         </Routes>
         <Footer />
       </div>
       <Modal />
       <div className="snackbars" id="form-output-global"></div>
-      <ProductsButton />
+      {/* <ProductsButton /> */}
     </Router>
   );
 }
