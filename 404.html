@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Toastduck International – Import & Export International Business</title>
+    <meta name="robots" content="noindex" />
+    <script>
+      // React Router (History API) SPA redirect for GitHub Pages
+      // Rewrite any non-file path back to / so React Router handles it
+      (function () {
+        var l = window.location;
+        var pathname = l.pathname;
+
+        // Skip if the path points to a real file (with extension)
+        if (pathname !== "/" && pathname.match(/\.[^/]+$/)) {
+          return; // let the 404 file request happen normally
+        }
+
+        // Rewrite back to /
+        l.replace(l.protocol + "//" + l.host + "/#" + l.pathname + l.search + l.hash);
+      })();
+    </script>
+  </head>
+  <body>
+    <p>Redirecting...</p>
+  </body>
+</html>
